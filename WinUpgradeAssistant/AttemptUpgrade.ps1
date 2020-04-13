@@ -1,0 +1,2 @@
+﻿Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=799445' -OutFile 'C:\Windows\Temp\WindowsUpgradeAssist.exe'
+C:\Windows\Temp\WindowsUpgradeAssist.exe /quietinstall /skipeula /auto upgrade

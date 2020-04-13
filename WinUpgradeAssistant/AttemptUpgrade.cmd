@@ -1,0 +1,1 @@
+Powershell.exe -ExecutionPolicy Bypass -File \\172.23.2.153\comodo\WinUpgradeAssistant\AttemptUpgrade.ps1
