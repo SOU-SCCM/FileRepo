@@ -16,7 +16,6 @@ if ($null -ne $AirwatchEnrollment) {
     $AirwatchRegPath
     $AirwatchEnrollment
 FOREACH ($AirwatchRegPath in $AirwatchEnrollment) {
-    reg export $AirwatchRegPath C:\Users\Public\MDMbackup.reg
     reg delete $AirwatchRegPath /f
 }
     Restart-Service -Name CcmExec -Force
