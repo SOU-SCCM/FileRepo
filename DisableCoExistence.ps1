@@ -1,4 +1,4 @@
-﻿# Disable MDM coexistence and restore SCCM functionality
+# Disable MDM coexistence and restore SCCM functionality
 # Warning: Airwatch stops sending certain telemetry while registry key is disabled
 # Backup key is saved to %PUBLIC% folder as "MDMbackup.reg"
 
@@ -15,10 +15,10 @@ if ($null -ne $AirwatchEnrollment) {
 
     $AirwatchRegPath
     $AirwatchEnrollment
-
+FOREACH ($AirwatchRegPath in $AirwatchEnrollment) {
     reg export $AirwatchRegPath C:\Users\Public\MDMbackup.reg
     reg delete $AirwatchRegPath /f
-
+}
     Restart-Service -Name CcmExec -Force
 }
 
